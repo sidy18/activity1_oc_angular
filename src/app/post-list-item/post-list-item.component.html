@@ -1,3 +1,7 @@
-<p>
-  post-list-item works!
-</p>
+<li [ngClass]="{'list-group-item' : true,
+                'list-group-item-success' : loveIts2 > 0,
+                'list-group-item-danger' : loveIts2 < 0}">
+    <h2>{{title2}} <font size=4>&nbsp;&nbsp;&nbsp;&nbsp;{{date2 | date:'dd/MM/y, hh:mm'}}</font></h2><br>
+    <p>{{content2}}</p><br>
+    <td><button class="btn btn-success" (click) = "onIncrement()">Love it</button></td><td><button class="btn btn-danger" (click) = "onDecrement()">Don't love it</button></td>
+</li>
